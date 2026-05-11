@@ -63,11 +63,8 @@ Column {
 Button(onClick = {
     val peso  = pesoUsuario.toDoubleOrNull() ?: 0.0
     val altura = alturaUsuario.toDoubleOrNull() ?: 0.0
-    resultado = if (peso > 0 && altura >0){
-        funcionHealthEngine.clasificarIMC(peso,altura)
-    }else{
-        "NO funcionan esos datos "
-    }
+    resultado = funcionHealthEngine.clasificarIMC(peso,altura)
+
 
 
 }){ Text("IMC")}
